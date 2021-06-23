@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GitHub-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="GitHubRepoListViewController" id="BYZ-38-t0r" customClass="GitHubRepoListViewController" customModule="PoPMVVMDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Nk5-kS-tIN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="my3-3G-RCm">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nk5-kS-tIN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DKh-sH-jgd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="my3-3G-RCm" secondAttribute="bottom" id="NzA-b4-UCA"/>
+                            <constraint firstItem="Nk5-kS-tIN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Om8-XS-7pl"/>
+                            <constraint firstItem="my3-3G-RCm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T7o-SF-fsQ"/>
+                            <constraint firstItem="my3-3G-RCm" firstAttribute="top" secondItem="Nk5-kS-tIN" secondAttribute="bottom" id="eSY-JK-JW1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="my3-3G-RCm" secondAttribute="trailing" id="oN3-ti-xqQ"/>
+                            <constraint firstItem="Nk5-kS-tIN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yTe-e0-Jqs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GitHub" id="sIe-5Y-i9j"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Nk5-kS-tIN" id="QqF-At-VLF"/>
+                        <outlet property="tableView" destination="my3-3G-RCm" id="DtN-bQ-CVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="62.946428571428569"/>
+        </scene>
+        <!--Git Hub User View Controller-->
+        <scene sceneID="UNR-ru-cCb">
+            <objects>
+                <viewController storyboardIdentifier="GitHubUserViewController" id="j9f-Qn-QSr" customClass="GitHubUserViewController" customModule="PoPMVVMDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TlU-qc-zio">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg2-bz-Xdw">
+                                <rect key="frame" x="100" y="438" width="214" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rZI-bA-fx9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rZI-bA-fx9" firstAttribute="trailing" secondItem="Cg2-bz-Xdw" secondAttribute="trailing" constant="100" id="79G-1U-IFz"/>
+                            <constraint firstItem="Cg2-bz-Xdw" firstAttribute="centerY" secondItem="TlU-qc-zio" secondAttribute="centerY" id="KLP-tt-O75"/>
+                            <constraint firstItem="Cg2-bz-Xdw" firstAttribute="leading" secondItem="rZI-bA-fx9" secondAttribute="leading" constant="100" id="oCR-lk-IRo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="usernameLabel" destination="Cg2-bz-Xdw" id="zSm-8J-J4y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gG8-1h-uKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
